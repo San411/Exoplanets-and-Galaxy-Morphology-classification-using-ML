@@ -3,75 +3,84 @@ import MKTypography from "components/MKTypography";
 import "./styles.css";
 
 function Form() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [dispositionScore, setDispositionScore] = useState("");
+  const [ntlpfp, setNtlpfp] = useState("");
+  const [cofpf, setCofpf] = useState("");
+  const [tcepn, setTcepn] = useState("");
+  const [pru, setPru] = useState("");
+  const [insflux, setInsflux] = useState("");
+  const [trdepth, settrdepth] = useState("");
+  const [sefpf, setSefpf] = useState("");
   return (
-    <form>
+    <form
+        action="http://127.0.0.1:5000/exoplanet"
+        method="post"
+        id="upload-form"
+        encType="multipart/form-data"
+      >
       <MKTypography variant="h4" mb={1}>
         <input
-          value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
+          value={dispositionScore}
+          onChange={(e) => setDispositionScore(e.target.value)}
           placeholder="Disposition Score"
           type="text"
-          name="firstName"
+          name="dispositionScore"
           required
         />
         <input
-          value={lastName}
-          onChange={(e) => setLastName(e.target.value)}
+          value={ntlpfp}
+          onChange={(e) => setNtlpfp(e.target.value)}
           placeholder="Not Transit-Like FPF"
           type="text"
-          name="lastName"
+          name="ntlpfp"
           required
         />
         <input
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          value={cofpf}
+          onChange={(e) => setCofpf(e.target.value)}
           placeholder="Centroid Offset FPF"
           type="text"
-          name="email"
+          name="cofpf"
           required
         />
         <input
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          value={tcepn}
+          onChange={(e) => setTcepn(e.target.value)}
           placeholder="TCE Planet Number"
           type="text"
-          name="password"
+          name="tcepn"
           required
         />
         <input
-          value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
+          value={pru}
+          onChange={(e) => setPru(e.target.value)}
           placeholder="Planetary Radius Upper"
           type="text"
-          name="firstName"
+          name="pru"
           required
         />
         <input
-          value={lastName}
-          onChange={(e) => setLastName(e.target.value)}
+          value={insflux}
+          onChange={(e) => setInsflux(e.target.value)}
           placeholder="Insulation Flux"
           type="text"
-          name="lastName"
+          name="insflux"
           required
         />
         <input
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Transit Depth"
+          value={trdepth}
+          onChange={(e) => settrdepth(e.target.value)}
+          placeholder="Transition depth"
           type="text"
-          name="email"
+          name="trdepth"
           required
         />
         <input
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          value={sefpf}
+          onChange={(e) => setSefpf(e.target.value)}
           placeholder="Stellar Eclipse FPF"
           type="text"
-          name="password"
+          name="sefpf"
           required
         />
         <button type="submit"> Predict </button>
