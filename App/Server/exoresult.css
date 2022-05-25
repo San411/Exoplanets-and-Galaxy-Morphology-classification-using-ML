@@ -1,0 +1,11 @@
+body
+{
+    background-image: url('Exoplanet.png');
+    background-size: 100%; 
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    align-items: center;
+    color: white;
+    background-repeat: no-repeat;
+}
