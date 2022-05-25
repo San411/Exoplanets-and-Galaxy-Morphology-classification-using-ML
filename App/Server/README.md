@@ -8,7 +8,7 @@ python -m venv ./pathtofolder
 ## **2. Install the necessary pip packages using the command**
 
 ```bash
-pip install -r requirements.text
+pip install -r requirements.txt
 ```
 
 ## 3. **Run the app.py file**
