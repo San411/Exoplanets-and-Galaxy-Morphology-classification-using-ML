@@ -1,0 +1,8 @@
+App/Server/venv
+__pycache__
+*.pyc
+model-64-0.15.hdf5
+MLP.h5
+test_case
+model.hdf5
+LR_model.sav
